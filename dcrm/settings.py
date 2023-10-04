@@ -24,6 +24,12 @@ SECRET_KEY = 'django-insecure-@v=(e(@aeph5dq=-#(d+)n2e76-kz$zq0+b#0t@k#mm6c&g4q1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# Disable caching
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
 
 ALLOWED_HOSTS = ['172.20.0.150']
 
